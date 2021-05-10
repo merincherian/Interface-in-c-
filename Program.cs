@@ -52,6 +52,7 @@ namespace Interface
            }
         }
 
+        //Function to call corresponding  object to class/account
         static int accountMenu(IBankProcesses account)
         {
             while(true)
@@ -69,7 +70,8 @@ namespace Interface
                {
                    case 1:
                    {
-                       Console.WriteLine("Balance:- {0}", account.getBalance());
+                       Console.WriteLine("\nBalance:- {0}\nPress Enter to continue", account.getBalance());
+                       Console.ReadKey();
                    } 
                    break;
 

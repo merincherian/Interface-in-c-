@@ -17,7 +17,16 @@ namespace Interface
 
         public void withdraw(float money)
         {
-            balance = balance - money;
+            
+            if(balance < money)
+            {
+                Console.WriteLine("\nINSUFFICIENT FUND\nPress Enter to continue");
+                Console.ReadKey();
+            }
+            else
+            {
+                balance = balance - money;
+            }
         }
 
         public float getBalance()
